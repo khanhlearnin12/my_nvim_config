@@ -9,7 +9,8 @@ table.insert(specs, require("plugins.obsidian"))
 table.insert(specs, require("plugins.neoscroll"))
 table.insert(specs, require("plugins.smoothcursor"))
 table.insert(specs, require("plugins.rename_variable"))
-
+table.insert(specs, require("plugins.conform"))
+table.insert(specs, require("plugins.mason"))
 
 -- You would add more plugin files here as you create them:
 -- table.insert(specs, require("plugins.telescope"))
