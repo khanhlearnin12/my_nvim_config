@@ -1,4 +1,15 @@
-try this with this command just copy this shit
+1. install nvim 
 ```bash
-mv ~/.config/nvim ~/.config/nvim.bak && git clone https://github.com/khanhlearnin12/my_nvim_config.git ~/.config/nvim && nvim
+sudo snap install nvim --classic 
 ```
+2. clone the repo
+```bash 
+git clone https://github.com/khanhlearnin12/my_nvim_config.git
+```
+3. go to my_nvim_config direc to mv all the file to `.config\nvim`
+```bash
+cd my_nvim_config\
+mv * ~/.config/nvim
+```
+### That it enjoys it 
+
