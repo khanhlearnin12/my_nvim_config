@@ -11,5 +11,12 @@ git clone https://github.com/khanhlearnin12/my_nvim_config.git
 cd my_nvim_config\
 mv * ~/.config/nvim
 ```
+### HOW SOME OF KEYMAP 
+press i to : go to insert mode 
+ctrl + vt: open there vertical terminal
+ctrl + ht: open there horizontal terminal 
+ctrl + e : exiting terminal mode 
+ctrl + hjkl : go to left down up right  
+
 ### That it enjoys it 
 
