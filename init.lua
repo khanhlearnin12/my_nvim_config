@@ -6,6 +6,7 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set clipboard+=unnamedplus")
 vim.cmd("set splitright")
+
 vim.g.mapleader = " "
 
 --system configuration
@@ -22,6 +23,13 @@ vim.keymap.set("n", "<leader>rn", ":IncRename ")
 vim.keymap.set("n", "<leader>cf", function()
 	require("conform").format()
 end, { desc = "format the current file" }) --format the code
+
+-- music playing keymap
+--local opts = { noremap = true, silent = true }
+--vim.keymap.set("n", "<leader>mp", ':lua require("music-controls").toggle()<CR>', opts)
+--vim.keymap.set("n", "<leader>mn", ':lua require("music-controls").next()<CR>', opts)
+--vim.keymap.set("n", "<leader>mb", ':lua require("music-controls").previous()<CR>', opts)
+--vim.keymap.set("n", "<leader>ms", ':lua require("music-controls").status()<CR>', opts)
 
 -- name keymap
 vim.keymap.set("n", "<leader>rn", function()

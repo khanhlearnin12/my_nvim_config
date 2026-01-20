@@ -10,8 +10,8 @@ return {
 			-- Conform will run the first available formatter
 			javascript = { "prettierd", "prettier", stop_after_first = true },
 			--clang format
-			c = { "clang-format" },
-			cpp = { "clang-format" },
+			-- c = { "clang-format" },
+			-- cpp = { "clang-format" },
 		},
 		format_on_save = {
 			-- These options will be passed to conform.format()
