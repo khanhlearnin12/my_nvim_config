@@ -7,6 +7,7 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set clipboard+=unnamedplus")
 vim.cmd("set splitright")
 
+--vim.cmd("set keymap=vietnamese-telex_utf-8")
 vim.g.mapleader = " "
 
 --system configuration
@@ -17,12 +18,16 @@ vim.wo.relativenumber = true
 vim.keymap.set("n", "<leader>pv", ":Ex<CR>", { desc = "this to see the content view" })
 vim.keymap.set("n", "<leader>vt", ":vert terminal<CR>", { desc = "this to open the vertical terminal" })
 vim.keymap.set("n", "<leader>ht", ":horizontal terminal<CR>", { desc = "this to open the horizontal terminal" })
-vim.keymap.set("n", "<leader>yy", '"+yy', { desc = "yank to the clipboard" })
+vim.keymap.set("n", "<leader>yy", '"+y<CR>', { desc = "yank to the clipboard" })
 vim.keymap.set("t", "<C-e>", "<C-\\><C-n>", { desc = "Exit terminal (Terminal Mode)" })
 vim.keymap.set("n", "<leader>rn", ":IncRename ")
 vim.keymap.set("n", "<leader>cf", function()
 	require("conform").format()
 end, { desc = "format the current file" }) --format the code
+vim.keymap.set("n", "<leader>b", ":Bars<CR>", { desc = "open the bars function" })
+vim.keymap.set("n", "<leader>cl", ":set ve=onemore<CR>", { desc = "one more time cross line" })
+vim.keymap.set("n", "<leader>tp", ":tabprevious<CR>", { desc = "go to the previous tab" })
+vim.keymap.set("n", "<leader>tn", ":tabnext<CR>", { desc = "go to next tab" })
 
 -- music playing keymap
 --local opts = { noremap = true, silent = true }

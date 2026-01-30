@@ -16,7 +16,7 @@ table.insert(specs, require("plugins.autopair"))
 table.insert(specs, require("plugins.folk_lazy"))
 table.insert(specs, require("plugins.bars"))
 table.insert(specs, require("plugins.spotify"))
-
+table.insert(specs, require("plugins.imgclip"))
 -- You would add more plugin files here as you create them:
 -- table.insert(specs, require("plugins.telescope"))
 -- table.insert(specs, require("plugins.colorscheme"))
