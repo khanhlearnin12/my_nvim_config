@@ -18,6 +18,7 @@ table.insert(specs, require("plugins.bars"))
 table.insert(specs, require("plugins.spotify"))
 table.insert(specs, require("plugins.imgclip"))
 table.insert(specs, require("plugins.blinkcmp"))
+table.insert(specs, require("plugins.notice"))
 
 -- You would add more plugin files here as you create them:
 -- table.insert(specs, require("plugins.telescope"))
