@@ -28,7 +28,8 @@ vim.keymap.set("n", "<leader>b", ":Bars<CR>", { desc = "open the bars function" 
 vim.keymap.set("n", "<leader>cl", ":set ve=onemore<CR>", { desc = "one more time cross line" })
 vim.keymap.set("n", "<leader>tp", ":tabprevious<CR>", { desc = "go to the previous tab" })
 vim.keymap.set("n", "<leader>tn", ":tabnext<CR>", { desc = "go to next tab" })
-
+-- Maps Ctrl + Backspace to delete the previous word in Insert Mode
+vim.keymap.set("i", "<C-H>", "<C-w>", { noremap = true, silent = true })
 -- music playing keymap
 --local opts = { noremap = true, silent = true }
 --vim.keymap.set("n", "<leader>mp", ':lua require("music-controls").toggle()<CR>', opts)
@@ -70,7 +71,22 @@ local plugins = {
 	-- this catppuccin
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	-- this treesitter
-	{ "nvim-treesitter/nvim-treesitter", branch = "master", lazy = false, build = ":TSUpdate" },
+	{
+		"nvim-treesitter/nvim-treesitter",
+		lazy = false,
+		build = ":TSUpdate",
+		config = function()
+			local config = require("nvim-treesitter.configs")
+			config.setup({
+				-- language ensure install
+				ensure_installed = { "lua", "vim", "vimdoc", "c", "python", "rust" },
+				-- highlight enable
+				highlight = { enable = true },
+				-- thăng bật lề tự động
+				indent = { enable = true },
+			})
+		end,
+	},
 	--this telescope pack
 	{ "nvim-telescope/telescope.nvim", tag = "v0.2.0", dependencies = { "nvim-lua/plenary.nvim" } },
 	--this is the nvim surronding
@@ -132,16 +148,6 @@ require("catppuccin").setup()
 vim.cmd.colorscheme("catppuccin")
 
 -- require for treesister
-require("nvim-treesitter.configs").setup({
-	-- language ensure install
-	ensure_installed = { "lua", "vim", "vimdoc", "c", "python", "rust" },
-	-- highlight enable
-	highlight = {
-		enable = true,
-	},
-	-- tính năng bật lề tự động
-	indent = { enable = true },
-})
 
 -- telescope configuration
 local builtin = require("telescope.builtin")
