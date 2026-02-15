@@ -20,6 +20,7 @@ table.insert(specs, require("plugins.imgclip"))
 table.insert(specs, require("plugins.blinkcmp"))
 table.insert(specs, require("plugins.notice"))
 table.insert(specs, require("plugins.opencode"))
+table.insert(specs, require("plugins.transparent"))
 
 -- You would add more plugin files here as you create them:
 -- table.insert(specs, require("plugins.telescope"))
