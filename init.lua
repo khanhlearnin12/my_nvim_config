@@ -14,6 +14,9 @@ vim.g.mapleader = " "
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+--colorscheme
+vim.api.nvim_set_hl(0, "Normal", { bg = "none", ctermbg = "none" })
+
 --keymap here
 vim.keymap.set("n", "<leader>pv", ":Ex<CR>", { desc = "this to see the content view" })
 vim.keymap.set("n", "<leader>vt", ":vert terminal<CR>", { desc = "this to open the vertical terminal" })
@@ -145,7 +148,7 @@ require("lazy").setup(plugins, opts)
 -- this is the themes part
 require("catppuccin").setup()
 -- require catppuccin
-vim.cmd.colorscheme("catppuccin")
+-- vim.cmd.colorscheme("catppuccin")
 
 -- require for treesister
 
